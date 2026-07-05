@@ -34,7 +34,25 @@ border-radius:10px;
 <p>Hello Shibu 👋</p>
 <p>Main Vandana AI hoon.</p>
 
-<button>🎤 Speak</button>
+<button onclick="speak()">🎤 Speak</button>
+<br><br>
+<input type="text" placeholder="Apna message likho...">
+<script>
+    function speak() {
+        let text = document.querySelector("input").value;
 
-</body>
-</html>
+            if (text.trim() === "") {
+                    alert("Pehle message likho!");
+                            return;
+                                }
+
+                                    let reply = "Tumne likha: " + text;
+
+                                        let voice = new SpeechSynthesisUtterance(reply);
+                                            voice.lang = "hi-IN";
+                                                speechSynthesis.speak(voice);
+                                                }
+                                                </script>
+
+                                                </body>
+                                                </html>
