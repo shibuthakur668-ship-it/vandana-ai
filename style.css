@@ -1,0 +1,89 @@
+*{
+      margin:0;
+        padding:0;
+          box-sizing:border-box;
+            font-family:Arial,sans-serif;
+            }
+
+            body{
+              background:#0b0615;
+                color:#fff;
+                  display:flex;
+                    justify-content:center;
+                      align-items:center;
+                        min-height:100vh;
+                        }
+
+                        .container{
+                          width:95%;
+                            max-width:430px;
+                              background:#161022;
+                                border:2px solid #8b5cf6;
+                                  border-radius:20px;
+                                    padding:20px;
+                                      box-shadow:0 0 25px rgba(139,92,246,.5);
+                                      }
+
+                                      h1{
+                                        text-align:center;
+                                          color:#c084fc;
+                                            margin-bottom:15px;
+                                            }
+
+                                            img{
+                                              width:180px;
+                                                display:block;
+                                                  margin:0 auto 20px;
+                                                    border-radius:20px;
+                                                      box-shadow:0 0 20px #8b5cf6;
+                                                      }
+
+                                                      #chat{
+                                                        height:300px;
+                                                          overflow-y:auto;
+                                                            background:#0f172a;
+                                                              border-radius:15px;
+                                                                padding:10px;
+                                                                  margin-bottom:15px;
+                                                                  }
+
+                                                                  .user,
+                                                                  .ai{
+                                                                    padding:10px;
+                                                                      margin:8px 0;
+                                                                        border-radius:12px;
+                                                                        }
+
+                                                                        .user{
+                                                                          background:#2563eb;
+                                                                            text-align:right;
+                                                                            }
+
+                                                                            .ai{
+                                                                              background:#7c3aed;
+                                                                              }
+
+                                                                              input{
+                                                                                width:100%;
+                                                                                  padding:12px;
+                                                                                    border:none;
+                                                                                      border-radius:10px;
+                                                                                        outline:none;
+                                                                                          margin-bottom:10px;
+                                                                                          }
+
+                                                                                          button{
+                                                                                            width:100%;
+                                                                                              padding:12px;
+                                                                                                border:none;
+                                                                                                  border-radius:10px;
+                                                                                                    background:#8b5cf6;
+                                                                                                      color:#fff;
+                                                                                                        font-size:16px;
+                                                                                                          cursor:pointer;
+                                                                                                          }
+
+                                                                                                          button:hover{
+                                                                                                            background:#7c3aed;
+                                                                                                            }
+}
