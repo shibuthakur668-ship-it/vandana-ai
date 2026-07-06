@@ -1,19 +1,19 @@
-async function sendMessage() {
-    let text = input.value;
-    if (text.trim() === "") return;
+async function getAIResponse(message) {
+    const response = await fetch(
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                contents: [{
+                    parts: [{ text: message }]
+                }]
+            })
+        }
+    );
 
-    addMessage(text, "user");
-    input.value = "";
-
-    addMessage("Vandana is typing...", "ai");
-
-    let reply = await getAIResponse(text);
-
-    // typing remove
-    let typing = document.querySelector(".ai:last-child");
-    if (typing) typing.remove();
-
-    addMessage(reply, "ai");
-
-    speak(reply);
+    const data = await response.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
 }
